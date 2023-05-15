@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity6">
+<html>
+<head>
+
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+            <li ><a th:href="@{/home}">Home</a></li>
+            <li ><a th:href="@{/home#menu}">Menu</a></li>
+            <li ><a th:href="@{/home#about}" >About</a></li>
+            <li ><a th:href="@{/home#contact}" >Contact</a></li>
+            <li ><a th:href="@{/order}" >Order</a></li>
+            <li sec:authorize="hasRole('ROLE_ADMIN')"><a th:href="@{/dataBase}" >Database</a></li>
+            <li sec:authorize="isAnonymous()"><a th:href="@{/login}">Login</a></li>
+            <li sec:authorize="isAuthenticated()"><a th:href="@{/dashboard}" >Dashboard</a></li>
+            <li sec:authorize="isAuthenticated()"><a th:href="@{/logout} " >LogOut</a></li>
+
+            </ul>
+        </nav>
+    </header>
+</body>
+</html>

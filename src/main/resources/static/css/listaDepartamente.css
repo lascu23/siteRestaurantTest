@@ -1,0 +1,29 @@
+
+
+
+#lista{
+    padding-top: 90px;
+}
+
+#tabelListaDepartamente{
+    border-collapse: collapse;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+th {
+  background-color: #4CAF50;
+  color: white;
+}
+
+h1{
+    text-align: center;
+    margin-bottom: 20px;
+}

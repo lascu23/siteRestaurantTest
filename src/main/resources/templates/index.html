@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Restaurantul Meu</title>
+    <link rel="stylesheet" href="/css/home.css">
+</head>
+
+<body>
+
+<div th:replace="~{header :: header}">...</div>
+
+<section id="home">
+    <h1>Bine ati venit la Restaurantul Meu!</h1>
+    <p>Ne mandrim cu preparatele noastre delicioase, atmosfera placuta si personalul prietenos.</p>
+</section>
+
+<section id="menu">
+    <h2>Meniu</h2>
+    <ul>
+        <li id="felPrincipal">
+            <h3>Fel Principal</h3>
+            <p>Descriere fel principal.</p>
+            <span>20 lei</span>
+        </li>
+        <li id="desert">
+            <h3>Desert</h3>
+            <p>Descriere desert.</p>
+            <span>10 lei</span>
+        </li>
+        <li id="bautura">
+            <h3>Bautura </h3>
+            <p>Descriere bautura.</p>
+            <span>5 lei</span>
+        </li>
+    </ul>
+</section>
+
+<section id="about">
+    <h2>Despre Noi</h2>
+    <p>Suntem un restaurant familial care ofera o varietate de preparate traditionale si moderne. Am creat acest restaurant pentru a oferi o experienta culinara unica.</p>
+</section>
+
+<section id="contact">
+    <h2>Contact</h2>
+    <ul>
+        <li><strong>Adresa:</strong> Strada Mea, Nr. 10</li>
+        <li><strong>Telefon:</strong> 0123 456 789</li>
+        <li><strong>Email:</strong> contact@restaurantulmeu.ro</li>
+    </ul>
+</section>
+</body>
+</html>

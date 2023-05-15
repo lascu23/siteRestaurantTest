@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de angajati</title>
+    <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="/css/listaAngajati.css">
+</head>
+<body>
+
+<div>
+    <header>
+        <div th:replace="~{header :: header}">...</div>
+    </header>
+</div>
+
+<div>
+    <h1>Lista de angajati</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Last Name</th>
+                <th>First Name</th>
+                <th>Birth Date</th>
+                <th>Hire Date</th>
+                <th>Department Id</th>
+                <th>Update</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="employee : ${employees}">
+                <td th:text="${employee.id}"></td>
+                <td th:text="${employee.lastName}"></td>
+                <td th:text="${employee.firstName}"></td>
+                <td th:text="${employee.birthDate}"></td>
+                <td th:text="${employee.hireDate}"></td>
+                <td th:text="${employee.department.departmentId}"></td>
+                <td><a th:href="@{/updateEmployee(employeeId = ${employee.id})}"><button id="butonUpdate">Update</button></a></td>
+                <td><a th:href="@{/deleteEmployee(employeeId = ${employee.id})}"><button id="butonDelete">Delete</button></a></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div style="text-align: center;"><a th:href="@{/addEmployee}"><button id="butonAdd" >Add Employee</button></a></div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Restaurant Database</title>
+    <link rel="stylesheet" href="/css/home.css">
+</head>
+
+
+<body>
+
+  <div>
+  <header>
+    <div th:replace="~{header :: header}">...</div>
+  </header>
+  </div>
+
+  <div class="containerr">
+    <div>
+      <h1 id="header1">Doar adminii au permisiune pentru aceasta pagina!</h1>
+    </div>
+      <div class="containerButoane">
+      <div id="department">
+        <a th:href="@{/departments}">Departments</a>
+      </div>
+      <div>
+        <a th:href="@{/employees}">Employees</a>
+      </div>
+      <div>
+         <a th:href="@{/orders}">Orders</a>
+      </div>
+      <div>
+        <a th:href="@{/clients}">Clients</a>
+      </div>
+      <div>
+        <a th:href="@{/products}">Products</a>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
